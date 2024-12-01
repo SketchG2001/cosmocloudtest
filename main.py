@@ -49,7 +49,7 @@ async def create_student(student: Student):
     return {"id": str(result.inserted_id)}
 
 
-@app.get("/students", status_code=200)
+@app.get("/", status_code=200)
 async def list_students(
         country: Optional[str] = Query(
             None,
