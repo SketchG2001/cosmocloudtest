@@ -101,4 +101,4 @@ async def delete_student(id: str):
     result = await students_collection.delete_one({"_id": ObjectId(id)})
     if result.deleted_count == 0:
         raise HTTPException(status_code=404, detail="Student not found")
-    return {"detail": "Student deleted successfully"}
+    return {}
